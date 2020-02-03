@@ -38,7 +38,7 @@
             </Scripts>
         </asp:ScriptManager>
 
-        <div class="navbar navbar-inverse navbar-fixed-top">
+        <div class="navbar navbar-inverse navbar-fixed-top" style="background-color:orangered;color:yellow;">
             <div class="container">
                 <div class="navbar-header">
                     <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
@@ -46,17 +46,16 @@
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
-                    <a class="navbar-brand" runat="server" href="#">Institute Portal </a>
+                    <a class="navbar-brand" runat="server" href="Default.aspx">Institute Portal </a>
                 </div>
-                <div class="navbar-collapse collapse">
+                <div class="navbar-collapse collapse" style="background-color:orangered;color:yellow;">
                     <ul class="nav navbar-nav">
                         <li><a runat="server" href="~/">Home</a></li>
                         <li><a runat="server" href="Student.aspx">Admission</a></li>
                         <li><a runat="server" href="Staff.aspx">Staff </a></li>
                         <li><a runat="server" href="Salary.aspx">Salary </a></li>
                         <li><a runat="server" href="Course.aspx">Course </a></li>
-                        <li><a runat="server" href="About.aspx">About </a></li>
-                        <li><a runat="server" href="Contact.aspx">Contact</a></li>
+                       
                     </ul>
                 </div>
             </div>
@@ -66,7 +65,7 @@
             </asp:ContentPlaceHolder>
             <hr />
             <footer>
-                <p>&copy; <%: DateTime.Now.Year %> - My ASP.NET Application</p>
+                <h2>&copy; <%: DateTime.Now.Year %> - My ASP.NET Application</h2>
             </footer>
         </div>
 

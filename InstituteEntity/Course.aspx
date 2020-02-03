@@ -12,6 +12,9 @@
 
 
     </style>
+     <h1 align="center"><u> Course Details </u></h1>
+    <div><h2>The following table is used for student admission which is using CRUD operation in which admin can add the data of the student, can update the record if needed and can delete the record also. Moreover this is auto genrated data that is used only for the purpose of the admin.</h2> </div><br/>
+    <marquee><h2 align="center">Course Record  </h2>  </marquee>
     <div class="container">
         <div class="row">
             <asp:ListView ID="ListView1" runat="server" DataSourceID="SqlDataSource1" DataKeyNames="id" InsertItemPosition="LastItem">
