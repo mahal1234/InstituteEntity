@@ -12,6 +12,8 @@
 
 
     </style>
+    <!--All below coding has used the entity framework and CRUD based operation is used and all data is autogenrated -->
+    <!--HTML h1 and other tags for the understanding -->
      <h1 align="center"><u> Course Details </u></h1>
     <div><h2>The following table is used for student admission which is using CRUD operation in which admin can add the data of the student, can update the record if needed and can delete the record also. Moreover this is auto genrated data that is used only for the purpose of the admin.</h2> </div><br/>
     <marquee><h2 align="center">Course Record  </h2>  </marquee>
@@ -19,6 +21,7 @@
         <div class="row">
             <asp:ListView ID="ListView1" runat="server" DataSourceID="SqlDataSource1" DataKeyNames="id" InsertItemPosition="LastItem">
                 <AlternatingItemTemplate>
+                     <!--  record showing heading of course table -->
                     <tr style="background-color: #FFFFFF;color: #284775;">
                         <td>
                             <asp:Button ID="DeleteButton" runat="server" CommandName="Delete" Text="Delete" />
@@ -66,6 +69,7 @@
                     </table>
                 </EmptyDataTemplate>
                 <InsertItemTemplate>
+                     <!--  record showing heading of course table -->
                     <tr style="">
                         <td>
                             <asp:Button ID="InsertButton" runat="server" CommandName="Insert" Text="Insert" />
@@ -86,6 +90,7 @@
                     </tr>
                 </InsertItemTemplate>
                 <ItemTemplate>
+                     <!--  record showing heading of course table -->
                     <tr style="background-color: #E0FFFF;color: #333333;">
                         <td>
                             <asp:Button ID="DeleteButton" runat="server" CommandName="Delete" Text="Delete" />
@@ -109,6 +114,7 @@
                     <table runat="server">
                         <tr runat="server">
                             <td runat="server">
+                                 <!--  record showing heading of course table -->
                                 <table id="itemPlaceholderContainer" runat="server" border="1" style="background-color: #FFFFFF;border-collapse: collapse;border-color: #999999;border-style:none;border-width:1px;font-family: Verdana, Arial, Helvetica, sans-serif;">
                                     <tr runat="server" style="background-color: #E0FFFF;color: #333333;">
                                         <th runat="server"></th>
@@ -128,6 +134,7 @@
                     </table>
                 </LayoutTemplate>
                 <SelectedItemTemplate>
+                    <!--  record showing heading of course table -->
                     <tr style="background-color: #E2DED6;font-weight: bold;color: #333333;">
                         <td>
                             <asp:Button ID="DeleteButton" runat="server" CommandName="Delete" Text="Delete" />
@@ -148,6 +155,7 @@
                     </tr>
                 </SelectedItemTemplate>
             </asp:ListView>
+               <!--to insert the data in the database the following query used which inserts the data of course table-->
             <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:InstituteDBConnectionString %>" DeleteCommand="DELETE FROM [Course] WHERE [id] = @id" InsertCommand="INSERT INTO [Course] ([id], [CourseName], [Duration], [CourseFee]) VALUES (@id, @CourseName, @Duration, @CourseFee)" SelectCommand="SELECT * FROM [Course] ORDER BY [id] DESC" UpdateCommand="UPDATE [Course] SET [CourseName] = @CourseName, [Duration] = @Duration, [CourseFee] = @CourseFee WHERE [id] = @id">
                 <DeleteParameters>
                     <asp:Parameter Name="id" Type="Int32" />

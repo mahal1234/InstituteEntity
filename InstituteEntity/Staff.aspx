@@ -13,7 +13,9 @@
 
 
     </style>
-     <h1 align="center"><u> Staff Details </u></h1>
+    <!--All below coding has used the entity framework and CRUD based operation is used and all data is autogenrated -->
+    <!--HTML tag telling about the page-->
+     <h1 align="center"><u>  Staff Details </u></h1>
     <div><h2>The following table is used for student admission which is using CRUD operation in which admin can add the data of the student, can update the record if needed and can delete the record also. Moreover this is auto genrated data that is used only for the purpose of the admin.</h2> </div><br/>
     <marquee><h2 align="center">Staff Record  </h2>  </marquee>
 
@@ -47,6 +49,7 @@
                         </td>
                     </tr>
                 </AlternatingItemTemplate>
+                
                 <EditItemTemplate>
                     <tr style="background-color: #999999;">
                         <td>
@@ -81,6 +84,7 @@
                     </table>
                 </EmptyDataTemplate>
                 <InsertItemTemplate>
+                     <!--  data fetched from databse is showing in the table -->
                     <tr style="">
                         <td>
                             <asp:Button ID="InsertButton" runat="server" CommandName="Insert" Text="Insert" />
@@ -106,6 +110,7 @@
                         </td>
                     </tr>
                 </InsertItemTemplate>
+                 
                 <ItemTemplate>
                     <tr style="background-color: #E0FFFF;color: #333333;">
                         <td>
@@ -133,6 +138,7 @@
                     </tr>
                 </ItemTemplate>
                 <LayoutTemplate>
+                   <!--table heading for understanding-->
                     <table runat="server">
                         <tr runat="server">
                             <td runat="server">
@@ -187,6 +193,7 @@
                 <DeleteParameters>
                     <asp:Parameter Name="id" Type="Int32" />
                 </DeleteParameters>
+                 
                 <InsertParameters>
                     <asp:Parameter Name="id" Type="Int32" />
                     <asp:Parameter Name="Name" Type="String" />
@@ -195,6 +202,7 @@
                     <asp:Parameter Name="FatherName" Type="String" />
                     <asp:Parameter Name="Designation" Type="String" />
                 </InsertParameters>
+               
                 <UpdateParameters>
                     <asp:Parameter Name="Name" Type="String" />
                     <asp:Parameter Name="Contact" Type="String" />

@@ -12,12 +12,19 @@
 
 
     </style>
+    <!--All below coding has used the entity framework and CRUD based operation is used and all data is autogenrated -->
+    <!--heading are given for the understanding purpose -->
     <h1 align="center"><u> Admission Details </u></h1>
     <div><h2>The following table is used for student admission which is using CRUD operation in which admin can add the data of the student, can update the record if needed and can delete the record also. Moreover this is auto genrated data that is used only for the purpose of the admin.</h2> </div><br/>
-    <marquee><h2 align="center">Admission Record  </h2>  </marquee>
+    <marquee><h2 align="center">Admission Record  </h2></marquee>
     <div class="container">
         <div class="row">
-            <asp:ListView ID="ListView1" runat="server" DataKeyNames="ID" DataSourceID="SqlDataSource1" InsertItemPosition="LastItem">
+
+
+
+
+
+            <asp:ListView ID="ListView1" runat="server" DataSourceID="SqlDataSource1" DataKeyNames="ID" InsertItemPosition="LastItem">
                 <AlternatingItemTemplate>
                     <tr style="background-color: #FFFFFF;color: #284775;">
                         <td>
@@ -194,28 +201,28 @@
                     </tr>
                 </SelectedItemTemplate>
             </asp:ListView>
-            <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:InstituteDBConnectionString4 %>" DeleteCommand="DELETE FROM [Student] WHERE [ID] = @ID" InsertCommand="INSERT INTO [Student] ([Name], [FatherName], [Dob], [Address], [Course], [Contact]) VALUES (@Name, @FatherName, @Dob, @Address, @Course, @Contact)" SelectCommand="SELECT * FROM [Student] ORDER BY [ID] DESC" UpdateCommand="UPDATE [Student] SET [Name] = @Name, [FatherName] = @FatherName, [Dob] = @Dob, [Address] = @Address, [Course] = @Course, [Contact] = @Contact WHERE [ID] = @ID">
-                <DeleteParameters>
-                    <asp:Parameter Name="ID" Type="Int32" />
-                </DeleteParameters>
-                <InsertParameters>
-                    <asp:Parameter Name="Name" Type="String" />
-                    <asp:Parameter Name="FatherName" Type="String" />
-                    <asp:Parameter Name="Dob" Type="String" />
-                    <asp:Parameter Name="Address" Type="String" />
-                    <asp:Parameter Name="Course" Type="String" />
-                    <asp:Parameter Name="Contact" Type="String" />
-                </InsertParameters>
-                <UpdateParameters>
-                    <asp:Parameter Name="Name" Type="String" />
-                    <asp:Parameter Name="FatherName" Type="String" />
-                    <asp:Parameter Name="Dob" Type="String" />
-                    <asp:Parameter Name="Address" Type="String" />
-                    <asp:Parameter Name="Course" Type="String" />
-                    <asp:Parameter Name="Contact" Type="String" />
-                    <asp:Parameter Name="ID" Type="Int32" />
-                </UpdateParameters>
+                   <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:InstituteDBConnectionString7 %>" DeleteCommand="DELETE FROM [Student] WHERE [ID] = @ID" InsertCommand="INSERT INTO [Student] ([Name], [FatherName], [Dob], [Address], [Course], [Contact]) VALUES (@Name, @FatherName, @Dob, @Address, @Course, @Contact)" SelectCommand="SELECT * FROM [Student] ORDER BY [ID] DESC" UpdateCommand="UPDATE [Student] SET [Name] = @Name, [FatherName] = @FatherName, [Dob] = @Dob, [Address] = @Address, [Course] = @Course, [Contact] = @Contact WHERE [ID] = @ID">
+                       <DeleteParameters>
+                           <asp:Parameter Name="ID" Type="Int32" />
+                       </DeleteParameters>
+                       <InsertParameters>
+                           <asp:Parameter Name="Name" Type="String" />
+                           <asp:Parameter Name="FatherName" Type="String" />
+                           <asp:Parameter Name="Dob" Type="String" />
+                           <asp:Parameter Name="Address" Type="String" />
+                           <asp:Parameter Name="Course" Type="String" />
+                           <asp:Parameter Name="Contact" Type="String" />
+                       </InsertParameters>
+                       <UpdateParameters>
+                           <asp:Parameter Name="Name" Type="String" />
+                           <asp:Parameter Name="FatherName" Type="String" />
+                           <asp:Parameter Name="Dob" Type="String" />
+                           <asp:Parameter Name="Address" Type="String" />
+                           <asp:Parameter Name="Course" Type="String" />
+                           <asp:Parameter Name="Contact" Type="String" />
+                           <asp:Parameter Name="ID" Type="Int32" />
+                       </UpdateParameters>
             </asp:SqlDataSource>
-        </div>
+                   </div>
           </div>
 </asp:Content>
